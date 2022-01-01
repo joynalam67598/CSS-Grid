@@ -9,7 +9,7 @@ body {
 .container {
   height: 100%;
   display: grid;
-  grid-template: 50px 1fr 50px / repeat(12, 1fr);
+  grid-template: 50px auto 50px / repeat(12, 1fr);
 }
 .container > div:nth-child(1n) {
   background-color: #1b5243;
