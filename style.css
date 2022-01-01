@@ -9,11 +9,9 @@ body {
 .container {
   height: 100%;
   display: grid;
-  grid-template: 50px auto 50px / repeat(12, 1fr);
-  grid-template-areas: 
-  "m m m . h h h h h h h ."
-  "m m m c c c c c c c c c"
-  "f f f f f f f f f f f f";
+  grid-template: repeat(1, 1fr) / repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-template: repeat(2, 1fr) / repeat(auto-fill, minmax(100px,1fr)); not good */
+  grid-auto-rows: 200px;
 }
 .container > div:nth-child(1n) {
   background-color: #1b5243;
@@ -29,17 +27,4 @@ body {
 
 .container > div:nth-child(4n) {
   background-color: #ffd166;
-}
-
-.header {
-  grid-area: h;
-}
-.menu {
-  grid-area: m;
-}
-.content {
-  grid-area: c;
-}
-.footer {
-  grid-area: f;
 }
